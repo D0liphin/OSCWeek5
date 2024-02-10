@@ -185,6 +185,13 @@ qemu-system-x86_64 -m 8G \
 
 This section is about how to set up InfOS on the remote OSC machine.
 
+1. Connect to the remote host. Again, replace `kxxxxxxxx` with your 
+   k-number.
+
+```sh
+ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk
+```
+
 1. Execute the following commands wherever you want to work on InfOS.
    (probably not your home directory).
 
@@ -195,7 +202,7 @@ cd infos && make && cd ..
 ln -s /shared/5CCS2OSC/run-infos .
 ```
 
-2. Execute `./run-infos`.
+3. Execute `./run-infos`.
 
 ```sh
 ./run-infos
