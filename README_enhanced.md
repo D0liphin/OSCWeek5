@@ -32,7 +32,7 @@ actual NMES page for connecting to bastion.
    "Remote - SSH")
 3. Install it
 
-![The actual page for installing the extension](image.png)
+![The actual page for installing the extension](https://imgur.com/htHi4j6.png)
 
 1. `Ctrl + Shift + P` This opens the command palette.
 2. Type "Developer: Reload Window"
@@ -76,7 +76,7 @@ Host *
    password. 
 7. See the section [Troubleshooting](#troubleshooting) for more
 
-![Password prompt](image2.png)
+![Password prompt](https://imgur.com/aAdQTMP.png)
 
 ## Troubleshooting
 
@@ -208,14 +208,16 @@ qemu-system-x86_64 -m 8G \
   -kernel ../infos/out/infos-kernel \
   -debugcon stdio \
   -hda bin/rootfs.tar \
-  -append 'pgalloc.debug=0 pgalloc.algorithm=simple objalloc.debug=0 sched.debug=0 sched.algorithm=cfs syslog=serial boot-device=ata0 init=/usr/init'
+  -append 'pgalloc.debug=0 pgalloc.algorithm=simple objalloc.debug=0 \
+    sched.debug=0 sched.algorithm=cfs syslog=serial boot-device=ata0 \
+    init=/usr/init'
 ```
 
 </panel>
 
-![QEMU running InfOS](image-1.png)
+![QEMU running InfOS](https://imgur.com/GQ0CA49.png)
 
-7. Yay, you did it! But we need to be able to update the remote machine
+1. Yay, you did it! But we need to be able to update the remote machine
    with our progress so that we can submit.
 
 <panel>

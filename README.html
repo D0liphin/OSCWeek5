@@ -1,0 +1,462 @@
+<!DOCTYPE html><html><head>
+      <title>README_enhanced</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk_RkaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf) format('truetype');
+}
+.markdown-preview.markdown-preview * {
+  font-family: 'Open Sans', sans-serif;
+}
+.markdown-preview.markdown-preview code {
+  color: #000000;
+  font-weight: 500;
+  padding: 2px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+.markdown-preview.markdown-preview pre code {
+  font-weight: normal;
+  color: #000000;
+}
+.markdown-preview.markdown-preview pre * {
+  font-family: monospace;
+}
+.markdown-preview.markdown-preview panel {
+  padding: 0;
+  border-radius: 8px;
+  display: flex;
+  margin-bottom: 24px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  overflow: hidden;
+}
+.markdown-preview.markdown-preview panel > h1 {
+  background-color: #363636;
+  color: #f0f0f0;
+  font-size: 15px;
+  padding: 5px 0px 5px 10px;
+}
+.markdown-preview.markdown-preview panel > * {
+  margin: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="setting-up-the-coursework-a-guide">Setting up the coursework (a guide) </h1>
+<p>This guide aims to help you set up the coursework either using VSCode,
+or by working on a local copy. See
+<a href="#setting-up-the-coursework-with-vscode">here</a> for the former and
+<a href="#setting-up-the-coursework-locally">here</a> for the latter.</p>
+<p>After you've done that, you can go <a href="#setting-up-infos">here</a> to get
+started with the coursework.</p>
+<h2 id="important-note">Important note </h2>
+<p><strong>This is not guaranteed to work</strong>. This is supposed to be a helpful
+guide, but I am not responsible for any long-term pain that might result
+from use of this guide. <strong>If you set up locally, I have no idea if it
+will actually let you submit</strong>. I am 99% sure it's fine, and worst case,
+just copy your files over.</p>
+<hr>
+<h1 id="setting-up-the-coursework-with-vscode">Setting up the coursework with VSCode </h1>
+<h2 id="install-remote---ssh">Install 'Remote - SSH' </h2>
+<p>You will need to make sure you have a working <code>ssh</code> command set up.
+Refer to the lab sheet for this. It's called something like
+'infos-coursework-preliminary.pdf'. Mostly you need to worry about the
+actual NMES page for connecting to bastion.</p>
+<ol>
+<li>Hit <code>Ctrl + Shift + X</code> to open up the extension manager</li>
+<li>Search for "remote ssh" and select the first one (It should be called
+"Remote - SSH")</li>
+<li>Install it</li>
+</ol>
+<p><img src="https://imgur.com/htHi4j6.png" alt="The actual page for installing the extension"></p>
+<ol>
+<li><code>Ctrl + Shift + P</code> This opens the command palette.</li>
+<li>Type "Developer: Reload Window"</li>
+<li>Select <code>Developer: Reload Window</code> and hit <code>Enter</code> or just clicking it
+is probably fine. <strong>From now on, these last three steps will be
+just written as "execute <code>Command</code> using the command palette".</strong></li>
+</ol>
+<h2 id="connecting-to-the-osc-machine">Connecting to the OSC machine </h2>
+<p>Time to connect your VSCode workspace to the remote OSC machine. First
+we set up our ssh config so that we can access the host quickly, then
+we connect to it.</p>
+<ol>
+<li>Execute <code>Remote-SSH: Open SSH Configuration File...</code> using the
+command palette.</li>
+<li>Choose the top configuration file, what exactly this file is depends
+on your OS, but hopefully the following works on any OS.</li>
+<li>Copy and paste this into your config file <strong>and save it</strong>. Make sure
+your replace <code>kxxxxxxxx</code> with your actual k-number.</li>
+</ol>
+<panel>
+<h1 id="config">config </h1>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># The remote host for our coursework</span>
+Host OSC
+    HostName 5CCS2OSC<span class="token punctuation">.</span>nms<span class="token punctuation">.</span>kcl<span class="token punctuation">.</span>ac<span class="token punctuation">.</span>uk
+    ProxyJump kxxxxxxxx@bastion<span class="token punctuation">.</span>nms<span class="token punctuation">.</span>kcl<span class="token punctuation">.</span>ac<span class="token punctuation">.</span>uk
+    User kxxxxxxxx
+
+<span class="token comment"># Set a 60 second keep alive in case there is no activity.</span>
+Host <span class="token operator">*</span>
+    ServerAliveInterval <span class="token number">60</span>
+</code></pre></panel>
+<ol start="4">
+<li>Execute <code>Remote-SSH: Connect to Host...</code> using the command palette.</li>
+<li>Select <code>OSC</code></li>
+<li>This should open a new window and you will be prompted to enter your
+password.</li>
+<li>See the section <a href="#troubleshooting">Troubleshooting</a> for more</li>
+</ol>
+<p><img src="https://imgur.com/aAdQTMP.png" alt="Password prompt"></p>
+<h2 id="troubleshooting">Troubleshooting </h2>
+<h3 id="i-cant-enter-my-password-fast-enough-and-it-times-out">I can't enter my password fast enough and it times out! </h3>
+<ol>
+<li>Execute <code>Remote-SSH: Settings</code> using the command palette</li>
+<li>Find 'Connnect Timeout'</li>
+<li>Set this to a longer duration than 15 seconds.
+<ol>
+<li>You can also do this by adding <code>"remote.SSH.connectTimeout": 100</code>
+to your <code>settings.json</code> if you prefer. Of course, <code>100</code> is just
+an example value.</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="setting-up-the-coursework-locally">Setting up the coursework locally </h1>
+<p>I much prefer working on things locally. Here's how you can do that.
+There are easier ways of doing this, but this should hopefully be quite
+future proof against anything that might be user-specific, so I would
+recommend everyone do this, instead of just copying someone else's
+local InfOS skeleton.</p>
+<ol>
+<li>Install a bunch of stuff...
+<ol>
+<li>Install qemu. This is OS-specific, so work it out.</li>
+<li>Install <strong>GCC</strong>. Don't use Clang. InfOS invokes some undefined
+behavior and I bet Clang actually notices.</li>
+<li>Install make.</li>
+<li>Install bash.</li>
+<li>Install git.</li>
+</ol>
+</li>
+<li><a href="#setting-up-infos">Setup InfOS</a> on the remote machine. You should
+now have <code>infos</code>, <code>infos-user</code> and <code>run-infos</code> all in the same
+folder. Please make sure you are in this folder.</li>
+<li>From here you have two options:
+<ol>
+<li><a href="#copy-everything-back-and-forth">Copy everything back and forth</a>
+This is basically the same as git, but without the <code>.gitignore</code>.</li>
+<li><a href="#use-git">Use git</a> This would probably be the most sensible way
+of doing things.</li>
+</ol>
+</li>
+</ol>
+<h2 id="copy-everything-back-and-forth">Copy everything back and forth </h2>
+<ol>
+<li>Run the following commands. You don't need to do this if you already
+have a directory that contains <em>only these three files</em>. In that
+case, just replace <code>coursework</code> with the name of that directory.</li>
+</ol>
+<panel>
+<h1 id="sh">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">mkdir</span> coursework
+<span class="token function">cp</span> <span class="token parameter variable">-r</span> infos coursework/infos
+<span class="token function">cp</span> <span class="token parameter variable">-r</span> infos-user coursework/infos-user
+<span class="token function">cp</span> run-infos coursework/run-infos
+</code></pre></panel>
+<ol start="2">
+<li>This should have made a folder with only these three files in it.
+Then, run these commands:</li>
+</ol>
+<panel>
+<h1 id="sh-1">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token builtin class-name">cd</span> coursework
+<span class="token builtin class-name">pwd</span>
+</code></pre></panel>
+<p>This will output a path. From now on I wall call this file path
+<code>&lt;coursework-path&gt;</code>. Wherever you see this token, please replace it with
+the output of the above command</p>
+<ol start="3">
+<li>Disconnect from the remote host E.g. on Linux, press <code>Ctrl + D</code>.</li>
+<li>Copy the archive to any local directory of your choice, here is a
+template. You are copying to <code>&lt;local-folder&gt;</code>, which should be
+replaced by some path on your local machine. Both <code>scp</code> and <code>rsync</code>
+versions are provided. I recommend <code>rsync</code>, it is much faster.</li>
+</ol>
+<panel>
+<h1 id="sh-2">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">rsync</span> <span class="token parameter variable">-avz</span> <span class="token parameter variable">--delete</span> <span class="token parameter variable">-e</span> <span class="token string">"ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk"</span> <span class="token punctuation">\</span>
+kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<span class="token operator">&lt;</span>coursework-path<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+<span class="token operator">&lt;</span>local-folder<span class="token operator">&gt;</span>
+</code></pre></panel>
+<p>An example of a full command:</p>
+<panel>
+<h1 id="sh-3">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">rsync</span> <span class="token parameter variable">-avz</span> <span class="token parameter variable">-e</span> <span class="token string">"ssh -J k21052695@bastion.nms.kcl.ac.uk"</span> <span class="token punctuation">\</span>
+k21052695@5CCS2OSC.nms.kcl.ac.uk:/home/k21052695/coursework/ <span class="token punctuation">\</span>
+/home/oli/Documents/School/Coursework/OSC/coursework
+</code></pre></panel>
+<ol start="5">
+<li>We need to make everything again</li>
+</ol>
+<panel>
+<h1 id="sh-4">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token builtin class-name">cd</span> ./coursework/infos
+<span class="token function">make</span>
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/infos-user
+<span class="token function">make</span>
+<span class="token function">make</span> fs
+</code></pre></panel>
+<ol start="6">
+<li>We can't use the normal <code>./run-infos</code> Makefile, so we need to do it
+ourself. You might want to make this a script. This has been taken
+from <a href="https://github.com/tspink/infos">the InfOS repository</a>. I'm not
+a qemu wizard.</li>
+</ol>
+<panel>
+<h1 id="sh-5">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code>qemu-system-x86_64 <span class="token parameter variable">-m</span> 8G <span class="token punctuation">\</span>
+  <span class="token parameter variable">-kernel</span> <span class="token punctuation">..</span>/infos/out/infos-kernel <span class="token punctuation">\</span>
+  <span class="token parameter variable">-debugcon</span> stdio <span class="token punctuation">\</span>
+  <span class="token parameter variable">-hda</span> bin/rootfs.tar <span class="token punctuation">\</span>
+  <span class="token parameter variable">-append</span> <span class="token string">'pgalloc.debug=0 pgalloc.algorithm=simple objalloc.debug=0 \
+    sched.debug=0 sched.algorithm=cfs syslog=serial boot-device=ata0 \
+    init=/usr/init'</span>
+</code></pre></panel>
+<p><img src="https://imgur.com/GQ0CA49.png" alt="QEMU running InfOS"></p>
+<ol>
+<li>Yay, you did it! But we need to be able to update the remote machine
+with our progress so that we can submit.</li>
+</ol>
+<panel>
+<h1 id="sh-6">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">rsync</span> <span class="token parameter variable">-avz</span> <span class="token parameter variable">-e</span> <span class="token string">"ssh -J k21052695@bastion.nms.kcl.ac.uk"</span> <span class="token punctuation">\</span>
+/home/oli/Documents/School/Coursework/OSC/ <span class="token punctuation">\</span>
+k21052695@5CCS2OSC.nms.kcl.ac.uk:/home/k21052695/coursework/
+</code></pre></panel>
+<p>When you're using the remote host, you should use <code>./run-infos</code> and when
+you're working locally, use <code>qemu-system-x86_64</code>.</p>
+<h3 id="using-scp-instead-of-rsync">Using <code>scp</code> instead of <code>rsync</code> </h3>
+<p>There are very few reasons to use <code>scp</code> instead of <code>rsync</code>, but here are
+the equivalent commands, incase you really want to.</p>
+<panel>
+<h1 id="sh-7">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">scp</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">-J</span> kxxxxxxxx@bastion.nms.kcl.ac.uk <span class="token punctuation">\</span>
+kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<span class="token operator">&lt;</span>coursework-path<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+<span class="token operator">&lt;</span>local-folder<span class="token operator">&gt;</span>
+</code></pre></panel>
+<panel>
+<h1 id="sh-8">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">scp</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">-J</span> kxxxxxxxx@bastion.nms.kcl.ac.uk <span class="token operator">&lt;</span>local-folder<span class="token operator">&gt;</span> <span class="token punctuation">\</span>
+kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<span class="token operator">&lt;</span>coursework-path<span class="token operator">&gt;</span>
+</code></pre></panel>
+<h2 id="use-git">Use Git </h2>
+<p>[TODO]</p>
+<hr>
+<h1 id="setting-up-infos">Setting up InfOS </h1>
+<p>This section is about how to set up InfOS on the remote OSC machine.</p>
+<ol>
+<li>Connect to the remote host. Again, replace <code>kxxxxxxxx</code> with your
+k-number.</li>
+</ol>
+<panel>
+<h1 id="sh-9">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">ssh</span> <span class="token parameter variable">-J</span> kxxxxxxxx@bastion.nms.kcl.ac.uk kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk
+</code></pre></panel>
+<ol>
+<li>Execute the following commands wherever you want to work on InfOS.
+(probably not your home directory).</li>
+</ol>
+<panel>
+<h1 id="sh-10">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token function">git</span> clone /shared/5CCS2OSC/infos
+<span class="token function">git</span> clone /shared/5CCS2OSC/infos-user
+<span class="token builtin class-name">cd</span> infos <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> /shared/5CCS2OSC/run-infos <span class="token builtin class-name">.</span>
+</code></pre></panel>
+<ol start="3">
+<li>Execute <code>./run-infos</code>.</li>
+</ol>
+<panel>
+<h1 id="sh-11">sh </h1>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code>./run-infos
+</code></pre></panel>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+ * {
+    font-family: 'Open Sans', sans-serif;
+}
+
+code {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 2px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+pre {
+    code {
+        font-weight: normal;
+        color: rgb(0, 0, 0);
+    }
+    * {
+        font-family: monospace;
+    }
+}
+
+panel {
+    padding: 0;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 24px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    overflow: hidden;
+
+    > h1 {
+        background-color: rgb(54, 54, 54);
+        color: rgb(240, 240, 240);
+        font-size: 15px;
+        padding: 5px 0px 5px 10px;
+    }
+
+    > * {
+        margin: 0px;
+        border-radius: 0px;
+        border: none;
+    }
+}
+</style>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
