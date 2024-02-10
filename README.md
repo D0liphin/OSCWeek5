@@ -100,7 +100,13 @@ local InfOS skeleton.
 2. [Setup InfOS](#setting-up-infos) on the remote machine. You should 
    now have `infos`, `infos-user` and `run-infos` all in the same 
    folder. Please make sure you are in this folder.
-3. Run the following commands (you could just make a `.sh` file)
+3. From here you have two options:
+   1. [Copy everything back and forth](#copy-everything-back-and-forth)
+   2. [Use git](#use-git)
+
+## Copy everything back and forth
+
+4. Run the following commands (you could just make a `.sh` file)
 
 ```sh
 mkdir allweneed
@@ -180,6 +186,12 @@ qemu-system-x86_64 -m 8G \
 10. Yay, you did it! In order to submit things, we have to copy things
     back to the remote machine. Use `scp` for this, in much the same way
     we did before.
+
+## Use Git
+
+This is a mostly better way of doing the previous thing, but you **must
+make sure your repository is private**, which is a bit of work to make
+smooth.
 
 # Setting up InfOS
 
