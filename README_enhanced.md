@@ -121,6 +121,9 @@ local InfOS skeleton.
    have a directory that contains *only these three files*. In that 
    case, just replace `coursework` with the name of that directory.
 
+<panel>
+
+# sh
 ```sh
 mkdir coursework
 cp -r infos coursework/infos
@@ -128,13 +131,20 @@ cp -r infos-user coursework/infos-user
 cp run-infos coursework/run-infos
 ```
 
+</panel>
+
 2. This should have made a folder with only these three files in it.
    Then, run these commands: 
 
+<panel>
+
+# sh
 ```sh
 cd coursework
 pwd
 ```
+
+</panel>
 
 This will output a path. From now on I wall call this file path
 `<coursework-path>`. Wherever you see this token, please replace it with 
@@ -146,22 +156,35 @@ the output of the above command
    replaced by some path on your local machine. Both `scp` and `rsync`
    versions are provided. I recommend `rsync`, it is much faster.
 
+<panel>
+
+# sh
 ```sh
 rsync -avz --delete -e "ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk" \
 kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<coursework-path> \
 <local-folder>
 ```
 
+</panel>
+
 An example of a full command:
 
+<panel>
+
+# sh
 ```sh
 rsync -avz -e "ssh -J k21052695@bastion.nms.kcl.ac.uk" \
 k21052695@5CCS2OSC.nms.kcl.ac.uk:/home/k21052695/coursework/ \
 /home/oli/Documents/School/Coursework/OSC/coursework
 ```
 
+</panel>
+
 5. We need to make everything again
 
+<panel>
+
+# sh
 ```sh
 cd ./coursework/infos
 make
@@ -170,11 +193,16 @@ make
 make fs
 ``` 
 
+</panel>
+
 6. We can't use the normal `./run-infos` Makefile, so we need to do it
    ourself. You might want to make this a script. This has been taken
    from [the InfOS repository](https://github.com/tspink/infos). I'm not
    a qemu wizard.
 
+<panel>
+
+# sh
 ```sh
 qemu-system-x86_64 -m 8G \
   -kernel ../infos/out/infos-kernel \
@@ -183,16 +211,23 @@ qemu-system-x86_64 -m 8G \
   -append 'pgalloc.debug=0 pgalloc.algorithm=simple objalloc.debug=0 sched.debug=0 sched.algorithm=cfs syslog=serial boot-device=ata0 init=/usr/init'
 ```
 
+</panel>
+
 ![QEMU running InfOS](image-1.png)
 
 7. Yay, you did it! But we need to be able to update the remote machine
    with our progress so that we can submit.
 
+<panel>
+
+# sh
 ```sh
 rsync -avz -e "ssh -J k21052695@bastion.nms.kcl.ac.uk" \
 /home/oli/Documents/School/Coursework/OSC/ \
 k21052695@5CCS2OSC.nms.kcl.ac.uk:/home/k21052695/coursework/
 ```
+
+</panel>
 
 When you're using the remote host, you should use `./run-infos` and when
 you're working locally, use `qemu-system-x86_64`. 
@@ -202,16 +237,26 @@ you're working locally, use `qemu-system-x86_64`.
 There are very few reasons to use `scp` instead of `rsync`, but here are
 the equivalent commands, incase you really want to.
 
+<panel>
+
+# sh
 ```sh
 scp -r -J kxxxxxxxx@bastion.nms.kcl.ac.uk \
 kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<coursework-path> \
 <local-folder>
 ```
 
+</panel>
+
+<panel>
+
+# sh
 ```sh
 scp -r -J kxxxxxxxx@bastion.nms.kcl.ac.uk <local-folder> \
 kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<coursework-path>
 ```
+
+</panel>
 
 ## Use Git
 
@@ -226,15 +271,21 @@ This section is about how to set up InfOS on the remote OSC machine.
 1. Connect to the remote host. Again, replace `kxxxxxxxx` with your 
    k-number.
 
+<panel>
+
+# sh
 ```sh
 ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk
 ```
 
-ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk
+</panel>
 
-2. Execute the following commands wherever you want to work on InfOS.
+1. Execute the following commands wherever you want to work on InfOS.
    (probably not your home directory).
 
+<panel>
+
+# sh
 ```sh
 git clone /shared/5CCS2OSC/infos
 git clone /shared/5CCS2OSC/infos-user
@@ -242,8 +293,63 @@ cd infos && make && cd ..
 ln -s /shared/5CCS2OSC/run-infos .
 ```
 
+</panel>
+
 3. Execute `./run-infos`.
 
+<panel>
+
+# sh
 ```sh
 ./run-infos
 ```
+
+</panel>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+ * {
+    font-family: 'Open Sans', sans-serif;
+}
+
+code {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 2px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+pre {
+    code {
+        font-weight: normal;
+        color: rgb(0, 0, 0);
+    }
+    * {
+        font-family: monospace;
+    }
+}
+
+panel {
+    padding: 0;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 24px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    overflow: hidden;
+
+    > h1 {
+        background-color: rgb(54, 54, 54);
+        color: rgb(240, 240, 240);
+        font-size: 15px;
+        padding: 5px 0px 5px 10px;
+    }
+
+    > * {
+        margin: 0px;
+        border-radius: 0px;
+        border: none;
+    }
+}
+</style>
