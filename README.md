@@ -230,8 +230,6 @@ This section is about how to set up InfOS on the remote OSC machine.
 ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk
 ```
 
-ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk
-
 2. Execute the following commands wherever you want to work on InfOS.
    (probably not your home directory).
 
