@@ -147,7 +147,7 @@ the output of the above command
    versions are provided. I recommend `rsync`, it is much faster.
 
 ```sh
-rsync -avz --delete -e "ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk" \
+rsync -avz -e "ssh -J kxxxxxxxx@bastion.nms.kcl.ac.uk" \
 kxxxxxxxx@5CCS2OSC.nms.kcl.ac.uk:<coursework-path> \
 <local-folder>
 ```
